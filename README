@@ -1,0 +1,68 @@
+Toy Robot
+=========
+This is a toy robot program which will move on a square table top. The table 
+dimensions are 5x5. We can interact with the toy robot using the following 
+commands
+
+PLACE X,Y,F --> Place robot at X,Y, facing direction F
+MOVE        --> Move one cell forward
+LEFT        --> Rotate 90 degrees to the left 
+RIGHT       --> Rotate 90 degrees to the right 
+REPORT      --> Report the position and direction which robot is facing
+
+F can be NORTH, SOUTH, EAST or WEST
+
+Building Toy Robot and tests
+============================
+Makefile is provided to build executables. This was developed in a Linux 
+environment, using gcc and Google test libraries for testing. All include files 
+and lib files are provided in toy_robot folder
+
+To build, make sure that Make and gcc is installed and run make in toy_robot 
+folder
+
+Two executables will be generated
+toy_robot_runner : for running the console application
+toy_robot_test : for running tests
+
+Console application
+===================
+toy_robot_runner is the name of console application. It can be run with or 
+without command line arguments. 
+When run without command line arguments, a menu for interacting with the robot 
+is provided.
+When run with command line argument, a filename can me provided which contains 
+a list of commands for interacting with the robot. The program will exit once 
+all the commands in the input file is executed
+
+C++ and Coding standards 
+========================
+C++17 standard is used
+Google C++ Style Guide is followed while coding 
+(https://google.github.io/styleguide/cppguide.html)
+
+Source Tree
+===========
+.
+├── commands.txt
+├── include
+│   └── gtest
+├── lib
+│   ├── libgtest.a
+│   └── libgtest_main.a
+├── Makefile
+├── README
+├── src
+│   ├── constants.h
+│   ├── main.cc
+│   ├── table.cc
+│   ├── table.h
+│   ├── toy.h
+│   ├── toy_robot.cc
+│   ├── toy_robot.h
+│   ├── toy_runner.cc
+│   └── toy_runner.h
+├── tests
+│   └── toy_robot_test.cc
+├── toy_robot_runner
+└── toy_robot_test
