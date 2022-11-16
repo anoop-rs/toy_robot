@@ -17,7 +17,5 @@ bool Table::IsValidPos(const uint8_t &x_pos, const uint8_t &y_pos) {
   // inside the table, it is valid, return true.
   // Check if the positions are greater than 0 since 0,0 is the lowest position
   // in the table.
-  return ((x_pos >= 0 && x_pos < row_) && (y_pos >= 0 && y_pos < column_))
-             ? true
-             : false;
+  return ((x_pos >= 0 && x_pos < row_) && (y_pos >= 0 && y_pos < column_));
 }
